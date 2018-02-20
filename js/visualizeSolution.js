@@ -8,9 +8,11 @@
      * добавив функционал, который позволит пошагово визуализировать работу данного алгоритма.
      * Сигнатуру функции можно выбрать наиболее удобную для вашей визуализации
      */
-    function visualizeSolution() {
-        // todo: визуализировать работу алгоритма
-    }
-
+    
+    
+    
+    function visualizeSolution() {}
+        
+  
     root.SHRI_ISLANDS.visualizeSolution = visualizeSolution;
 })(this);

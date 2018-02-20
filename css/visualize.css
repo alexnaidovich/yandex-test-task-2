@@ -1,0 +1,23 @@
+.map, .map__cell {
+    position: relative;
+}
+
+.pointer {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #111;
+    background-color: transparent;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 5;
+    transition: left .4s ease,
+                top .4s ease,
+                opacity .4s ease;
+}
+
+.start {
+    
+}

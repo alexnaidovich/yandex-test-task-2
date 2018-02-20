@@ -5,4 +5,5 @@
     document.querySelector('.outer').appendChild(
         root.SHRI_ISLANDS.render(map, count)
     );
+    var visual = root.SHRI_ISLANDS.visualizeSolution(map);
 })(this);

@@ -9,16 +9,16 @@
      * @param {number[][]} map карта островов представленная двумерной матрицей чисел
      * @returns {number} кол-во островов
      */
-    let point = 0;
-    let shift = 1;
-    let checked = [];
+    var point = 0;
+    var shift = 1;
+    var checked = [];
 
     function solution(map) {
         // todo: подсчитать кол-во островов на карте
-        let islands = 0;
-        let checkedIndex = 0;
-        for (let r = 0; r < map.length; r++) {
-            for (let c = 0; c < map[r].length; c++) {
+        var islands = 0;
+        var checkedIndex = 0;
+        for (var r = 0; r < map.length; r++) {
+            for (var c = 0; c < map[r].length; c++) {
                 if (map[r][c] === 1 && notInChecked(r, c)) {
                     point = [r,c];
                     checked.push(point);
@@ -35,9 +35,9 @@
     };
 
     function horizontalShift(map, x, y) {
-    let positiveShift = true;
-    let negativeShift = true;
-    for (let i = x, j = y; ((j < map[0].length) && (positiveShift)); j++) {
+    var positiveShift = true;
+    var negativeShift = true;
+    for (var i = x, j = y; ((j < map[0].length) && (positiveShift)); j++) {
         if (map[i][j+shift] === 1 && notInChecked(i, j+shift)) {
             point = [i,j+shift];
             checked.push(point);
@@ -45,7 +45,7 @@
             positiveShift = false;
         }
     }
-    for (let i = x, j = y; ((j >= 0) && (negativeShift)); j--) {
+    for (var i = x, j = y; ((j >= 0) && (negativeShift)); j--) {
         if (map[i][j-shift] === 1 && notInChecked(i, j-shift)) {
             point = [i,j-shift];
             checked.push(point);
@@ -56,9 +56,9 @@
 };
 
     function verticalShift(map, x, y) {
-    let positiveShift = true;
-    let negativeShift = true;
-    for (let i = x, j = y; ((i < map.length) && (i != map.length - 1) && (positiveShift)); i++) {
+    var positiveShift = true;
+    var negativeShift = true;
+    for (var i = x, j = y; ((i < map.length) && (i != map.length - 1) && (positiveShift)); i++) {
         if (map[i+shift][j] === 1 && notInChecked(i+shift, j)) {
             point = [i+shift,j];
             checked.push(point);
@@ -66,7 +66,7 @@
             positiveShift = false;
         }
     }
-    for (let i = x, j = y; ((i > 0) && (negativeShift)); i--) {
+    for (var i = x, j = y; ((i > 0) && (negativeShift)); i--) {
         if (map[i-shift][j] === 1 && notInChecked(i-shift, j)) {
             point = [i-shift,j];
             checked.push(point);
@@ -78,7 +78,7 @@
 
     // принимает координаты х, у текущей точки на проверку того, встречалась ли она ранее 
     function notInChecked(x, y) {
-        for (let i = 0; i < checked.length; i++) {
+        for (var i = 0; i < checked.length; i++) {
             if (checked[i][0] === x && checked[i][1] === y) {
                 return false;
             }

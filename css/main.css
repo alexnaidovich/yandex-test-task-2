@@ -30,12 +30,16 @@ body {
     margin-right: 1px;
     margin-bottom: 1px;
     border: 1px solid #eee;
+    background-color: #aaa;
+    transition: background-color .5s linear;
 }
 
 .map__cell_water {
     background-color: #65a6ff;
+    transition: background-color .5s linear;
 }
 
 .map__cell_island {
     background-color: #fad946;
+    transition: background-color .5s linear;
 }
